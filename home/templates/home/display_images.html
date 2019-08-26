@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of images</title>
+</head>
+<body>
+
+                        <ul>
+                        {% for document in documents %}
+                                <li><a href="{{ document.docfile.url }}">{{ document.docfile.name }}
+                                <img src="{{ document.docfile.url }}" alt="{{ document.docfile.name }}">
+                                </a></li>
+                        {% endfor %}
+                        </ul>
+
+                        <p>No documents.</p>
+
+</body>
+</html>
